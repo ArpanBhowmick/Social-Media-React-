@@ -11,7 +11,30 @@
     min-height: 800px;
 }
 
+.post-card {
+    margin: 20px 50px;
+}
 
+.mybtn {
+    width: 45px;
+    height: 27px;
+}
+
+.reactions {
+    /* margin-top: 15px ; */
+    margin: 15px;
+    /* margin-bottom: 0px; */
+    margin-top: -6px;
+}
+.hashtag {
+    height: 1.5rem;
+}
+
+.create-post{ 
+    width: 80%;
+    margin-top: 50px;
+    margin-left: 10%;
+}
 
 
 

@@ -6,23 +6,33 @@ import SideBar from "./component/Sidebar";
 import CreatePost from "./component/CreatePost";
 import PostList from "./component/PostList";
 import { useState } from "react";
+import PostListProvider from "./store/post-list-store";
 
 function App() {
-
-  const [selectedTab , setselectedTab] = useState("Home")
+  const [selectedTab, setselectedTab] = useState("Home");
 
   return (
-    
+    <PostListProvider>
       <div className="app-container">
-        <SideBar selectedTab ={selectedTab} setselectedTab = {setselectedTab}></SideBar>
-        <div className="content">
-        <Header></Header>     
-        {selectedTab === "Home" ? <PostList></PostList> : <CreatePost></CreatePost>}
         
-        <Footer></Footer>
+        <SideBar
+          selectedTab={selectedTab}
+          setselectedTab={setselectedTab}
+        ></SideBar>
+
+        <div className="content">
+          <Header></Header>
+
+          {selectedTab === "Home" ? (
+            <PostList></PostList>
+          ) : (
+            <CreatePost></CreatePost>
+          )}
+
+          <Footer></Footer>
         </div>
       </div>
-    
+    </PostListProvider>
   );
 }
 
