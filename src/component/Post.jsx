@@ -19,11 +19,6 @@ const Post = ({ post }) => {
             <span className="visually-hidden">unread messages</span>
           </span>
 
-          {/* <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-            {post.reaction}
-            <span class="visually-hidden">unread messages</span>
-          </span> */}
-
           <p className="card-text">{post.body}</p>
           {post.tags.map((tag) => (
             <a
@@ -31,7 +26,8 @@ const Post = ({ post }) => {
               className="badge text-bg-primary me-1 hashtag"
               key={tag}
             >
-              #enjoying
+              #{tag}
+              
             </a>
           ))}
         </div>
